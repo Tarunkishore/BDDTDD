@@ -7,8 +7,8 @@ Scenario Outline: upload resume in instahyre
     When Search Instahyre and open sussessfully
     Then I enter "<username>" and "<password>" of instahyre
     And I wait Low
-    Then I click on login button
-    Then I click on Profile Tab in header
+    Then I click on "Login_button"
+    Then I click on "Profile_Tab_header"
     And I wait High
     And I scoll to view "instahyre_Resume"
     And I update resume for instahyre

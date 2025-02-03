@@ -40,7 +40,7 @@ WebDriver driver;
 	
 	@And("Search youtube and open sussessfully")
 	public void search_youtube_and_open_sussessfully() throws IOException {
-		FileReader reader=new FileReader("/Users/tarunkishore/eclipse-workspace/CucumberJava/src/test/java/pageObjects/pageobject.properties");
+		FileReader reader=new FileReader("/Users/tarunkishore/git/repository/BDDTDD/src/test/resources/Pageobjects/pageobject.properties");
 		Properties prop=new Properties();
         prop.load(reader);
 //      driver.get("https://www.youtube.com/");
@@ -50,10 +50,10 @@ WebDriver driver;
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
 		System.out.println("YouTube title verified successfully");
 	}
-
+	
 	@Then("I click on {string}")
-	public void i_click_on(String string) throws IOException {
-		FileReader reader=new FileReader("/Users/tarunkishore/eclipse-workspace/CucumberJava/src/test/java/pageObjects/pageobject.properties");
+	public void i_click_on(String string) throws IOException {	
+		FileReader reader=new FileReader("/Users/tarunkishore/git/repository/BDDTDD/src/test/resources/Pageobjects/pageobject.properties");
 		Properties prop=new Properties();
         prop.load(reader);
 		System.out.println("Looking for search button : "+string);
@@ -65,7 +65,7 @@ WebDriver driver;
 	
 	@Then("I verify {string} available on present page")
 	public void i_verify_available_on_present_page(String string) throws IOException {
-		FileReader reader=new FileReader("/Users/tarunkishore/eclipse-workspace/CucumberJava/src/test/java/pageObjects/pageobject.properties");
+		FileReader reader=new FileReader("/Users/tarunkishore/git/repository/BDDTDD/src/test/resources/Pageobjects/pageobject.properties");
 		Properties prop=new Properties();
         prop.load(reader);
         String searchTerm = prop.getProperty(string);
@@ -79,7 +79,7 @@ WebDriver driver;
 	@And("I scoll to view {string}")
 	public void i_scoll_to_view(String string) throws InterruptedException, IOException {
 //		Thread.sleep(5000);
-		FileReader reader=new FileReader("/Users/tarunkishore/eclipse-workspace/CucumberJava/src/test/java/pageObjects/pageobject.properties");
+		FileReader reader=new FileReader("/Users/tarunkishore/git/repository/BDDTDD/src/test/resources/Pageobjects/pageobject.properties");
 		Properties prop=new Properties();
         prop.load(reader);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
@@ -183,7 +183,7 @@ WebDriver driver;
 //		WebElement updateResumeButton = driver.findElement(By.xpath("//input[@type='button' and @value='Update resume']"));
 //		updateResumeButton.click();
 		WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
-		fileInput.sendKeys("/Users/tarunkishore/eclipse-workspace/CucumberJava/Files/Tarunkishore_SQA.pdf");
+		fileInput.sendKeys("/Users/tarunkishore/git/repository/BDDTDD/src/test/resources/Files/Tarunkishore_SQA.pdf");
 	}
 	
 	@Then("I update resume for instahyre")
@@ -199,7 +199,7 @@ WebDriver driver;
 		updateResumeButton.click();
 		Thread.sleep(10000);
 		WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
-		fileInput.sendKeys("/Users/tarunkishore/eclipse-workspace/CucumberJava/Files/Tarunkishore_SQA.pdf");
+		fileInput.sendKeys("/Users/tarunkishore/git/repository/BDDTDD/src/test/resources/Files/Tarunkishore_SQA.pdf");
 		Thread.sleep(10000);	
 	}
 	
@@ -249,11 +249,11 @@ WebDriver driver;
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
 		Thread.sleep(10000);
-		WebElement updateResumeButton = driver.findElement(By.xpath("(//input[@id='inline-resume'])[2]"));
+		WebElement updateResumeButton = driver.findElement(By.xpath("(//input[@id='inline-resume'])[1]"));
 		updateResumeButton.click();
 		Thread.sleep(10000);
 		WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
-		fileInput.sendKeys("/Users/tarunkishore/eclipse-workspace/CucumberJava/Files/Tarunkishore.pdf");
+		fileInput.sendKeys("/Users/tarunkishore/git/repository/BDDTDD/src/test/resources/Files/Tarunkishore_SQA.pdf");
 		Thread.sleep(10000);
 		
 	}
