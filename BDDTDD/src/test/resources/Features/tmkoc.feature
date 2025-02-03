@@ -1,7 +1,7 @@
 @SmokeTest
 Feature: TMKOC
 
-@smoke
+@smoke @TMKOCEP
 Scenario Outline: Tarak mehta ka ulta chasma
 	  Given Launch Brave Browser
 	  	And Search youtube and open sussessfully
