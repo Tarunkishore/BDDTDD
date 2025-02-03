@@ -95,12 +95,6 @@ WebDriver driver;
 		System.out.println("Scrolled Successfully to : " + element.getText());
 		
 	}
-//	@Then("I click on Search")
-//	public void i_click_on_search() throws IOException {
-//		System.out.println("Looking for search button");
-//		driver.findElement(By.xpath("(//button[@title='Search'])[1]")).click();
-//		System.out.println("Clicked Search button successfully");
-//	}
 
 	@When("Search {string}")
 	public void search(String str) {
@@ -112,7 +106,6 @@ WebDriver driver;
 	@When("Search naukari and open sussessfully")
 	public void search_naukari_and_open_sussessfully() {
 		driver.get("https://www.naukri.com/mnjuser/homepage");
-//		Assert.assertEquals(driver.getTitle(), "Home | Mynaukri");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
 		System.out.println("YouTube title verified successfully");
 	}
@@ -122,16 +115,6 @@ WebDriver driver;
 		driver.findElement(By.xpath("//input[@id='usernameField']")).sendKeys(string);
 		driver.findElement(By.xpath("//input[@id='passwordField']")).sendKeys(string2);
 	}
-
-//	@Then("i click on login button")
-//	public void i_click_on_login_button() {
-//		driver.findElement(By.xpath("//button[text()='Login']")).click();
-//	}
-	
-//	@When("i click on View Profile")
-//	public void i_click_on_view_profile() {
-//		driver.findElement(By.xpath("//a[text()='View' and text()=' profile']")).click();
-//	}
 
 	@And("I wait Low")
 	public void i_wait_low() throws InterruptedException {
@@ -169,13 +152,6 @@ WebDriver driver;
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
 	}
 	
-//	@Then("I click on Profile Tab in header")
-//	public void i_click_on_profile_tab_in_header() {
-//		driver.findElement(By.xpath("//a[text()='Profile']")).click();
-//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
-//		System.out.println("Profile tab button clicked");
-//	}
-	
 	@Then("I upload Resume on Naukari")
 	public void i_upload_resume_on_naukari() throws InterruptedException {
 //		String projectPath = System.getProperty("user.dir"); 
@@ -183,7 +159,7 @@ WebDriver driver;
 //		WebElement updateResumeButton = driver.findElement(By.xpath("//input[@type='button' and @value='Update resume']"));
 //		updateResumeButton.click();
 		WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
-		fileInput.sendKeys("/Users/tarunkishore/git/repository/BDDTDD/src/test/resources/Files/Tarunkishore_SQA.pdf");
+		fileInput.sendKeys("/Users/tarunkishore/git/repository/BDDTDD/src/test/resources/Utilities/Tarunkishore_SQA.pdf");
 	}
 	
 	@Then("I update resume for instahyre")
@@ -199,7 +175,7 @@ WebDriver driver;
 		updateResumeButton.click();
 		Thread.sleep(10000);
 		WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
-		fileInput.sendKeys("/Users/tarunkishore/git/repository/BDDTDD/src/test/resources/Files/Tarunkishore_SQA.pdf");
+		fileInput.sendKeys("/Users/tarunkishore/git/repository/BDDTDD/src/test/resources/Utilities/Tarunkishore_SQA.pdf");
 		Thread.sleep(10000);	
 	}
 	
@@ -253,7 +229,7 @@ WebDriver driver;
 		updateResumeButton.click();
 		Thread.sleep(10000);
 		WebElement fileInput = driver.findElement(By.xpath("//input[@type='file']"));
-		fileInput.sendKeys("/Users/tarunkishore/git/repository/BDDTDD/src/test/resources/Files/Tarunkishore_SQA.pdf");
+		fileInput.sendKeys("/Users/tarunkishore/git/repository/BDDTDD/src/test/resources/Utilities/Tarunkishore_SQA.pdf");
 		Thread.sleep(10000);
 		
 	}

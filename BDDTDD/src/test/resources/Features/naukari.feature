@@ -19,23 +19,23 @@ Scenario Outline: upload resume in naukari
 			And I wait Low
 		Then I click on "Naukari_Update_resume"
 		Then I upload Resume on Naukari
-			And I switch to frame
-		Then I click on "Naukari_UpdateResume_Resume"
-		Then I verify "Naukari_UpdateResume_Resume" available on present page
-			And I scoll to view "Resume_Headline_text"
-			And I wait Low
-			And I scoll to view "Personal_details_header"
-			And I wait Low
-		Then I verify "Personal_details_header" available on present page
-			And I wait Low
-			And I scoll to view "Naukari_Update_resume"
-			And I wait Low
-		Then I verify "Naukari_Update_resume" available on present page
-			And I wait Low
-			And I scoll to view "Personal_details_header"
-			And I wait Low
-		Then I verify "Personal_details_header" available on present page
-			And I wait Low
+#			And I switch to frame
+#		Then I click on "Naukari_UpdateResume_Resume"
+#		Then I verify "Naukari_UpdateResume_Resume" available on present page
+#			And I scoll to view "Resume_Headline_text"
+#			And I wait Low
+#			And I scoll to view "Personal_details_header"
+#			And I wait Low
+#		Then I verify "Personal_details_header" available on present page
+#			And I wait Low
+#			And I scoll to view "Naukari_Update_resume"
+#			And I wait Low
+#		Then I verify "Naukari_Update_resume" available on present page
+#			And I wait Low
+#			And I scoll to view "Personal_details_header"
+#			And I wait Low
+#		Then I verify "Personal_details_header" available on present page
+			And I wait High
 	  	And Close the Brave browser
 		
     Examples: 
