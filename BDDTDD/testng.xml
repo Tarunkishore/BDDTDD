@@ -4,7 +4,7 @@
 <suite name="Cucumber Suite">
     <test name="Cucumber Tests">
         <classes>
-            <class name="Stepsdefinitions.TestRunner"/>
+            <class name="TestRunner.TestNGRunner"/>
         </classes>
     </test>
 </suite>

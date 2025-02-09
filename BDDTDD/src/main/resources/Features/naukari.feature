@@ -40,4 +40,4 @@ Scenario Outline: upload resume in naukari
 		
     Examples: 
       | username                  | password  |
-      | kishoretarunuem@gmail.com | Qwe123Asd |
+      |  |  |

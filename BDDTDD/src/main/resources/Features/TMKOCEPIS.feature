@@ -1,7 +1,7 @@
-@TMKOCEPS123
+@TMKOCEPS
 Feature: TMKOC
 
-@smoke @TMKOCEP123
+@smoke @TMKOCEP
 Scenario Outline: Tarak mehta ka ulta chasma
 	  Given Launch Brave Browser
 	  	And Search youtube and open sussessfully
@@ -10,7 +10,7 @@ Scenario Outline: Tarak mehta ka ulta chasma
 	  Then I click on "Youtube_Search"
 	  	And I wait High
 #			And I scoll to view "Video_TMKOC_123"
-#		Then I verify "Video_TMKOC_123" available on present page
+		Then I verify "Video_TMKOC_123" available on present page
 #			And I scoll to view "Video_TMKOC_101"
 #		Then I verify "Video_TMKOC_101" available on present page
 #			And I scoll to view "Video_TMKOC_107"
