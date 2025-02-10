@@ -3,7 +3,7 @@
 
 <suite name="Cucumber Suite">
 	<test name="Cucumber Tests">
-		<!-- <parameter name="cucumber.filter.tags" value="@TMKOC" /> -->
+		<parameter name="cucumber.filter.tags" value="@instahyre" />
 		<classes>
 			<class name="TestRunner.TestNGRunner" />
 		</classes>
