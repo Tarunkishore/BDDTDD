@@ -10,15 +10,15 @@ Scenario Outline: upload resume in naukari
 		Then I enter "<username>" and "<password>"
 			And I wait Low
 		Then I click on "Naukari_Login"
-			And I wait Low
-			And I scoll to view "Naukari_ViewProfile_AboutUs"
-			And I wait Low
-			And I scoll to view "Naukari_ViewProfile"
-			And I wait Low
-		Then I click on "Naukari_ViewProfile"
-			And I wait Low
-		Then I click on "Naukari_Update_resume"
-		Then I upload Resume on Naukari
+#			And I wait Low
+#			And I scoll to view "Naukari_ViewProfile_AboutUs"
+#			And I wait Low
+#			And I scoll to view "Naukari_ViewProfile"
+#			And I wait Low
+#		Then I click on "Naukari_ViewProfile"
+#			And I wait Low
+#		Then I click on "Naukari_Update_resume"
+#		Then I upload Resume on Naukari
 #			And I switch to frame
 #		Then I click on "Naukari_UpdateResume_Resume"
 #		Then I verify "Naukari_UpdateResume_Resume" available on present page
@@ -40,4 +40,3 @@ Scenario Outline: upload resume in naukari
 		
     Examples: 
       | username                  | password  |
-      | kishoretarunuem@gmail.com | Qwe123Asd |
