@@ -1,7 +1,7 @@
-@instahyre
+@instahyreFeature
 Feature: Istahyre
 
-@smoke1
+@instahyre
 Scenario Outline: upload resume in instahyre
     Given Launch Brave Browser
     When Search Instahyre and open sussessfully
