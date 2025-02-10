@@ -1,7 +1,7 @@
-@Regression
+@NaukariFeature
 Feature: Naukari
 
-@smoke
+@naukari
 Scenario Outline: upload resume in naukari
 		Given Launch Brave Browser
 			And I wait Low
