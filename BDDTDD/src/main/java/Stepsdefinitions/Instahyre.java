@@ -10,7 +10,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Instahyre{
-	WebDriver driver = TMKOCEP.driver;
+	WebDriver driver = Common.driver;
 	
 	@When("Search Instahyre and open sussessfully")
 	public void search_instahyre_and_open_sussessfully() {

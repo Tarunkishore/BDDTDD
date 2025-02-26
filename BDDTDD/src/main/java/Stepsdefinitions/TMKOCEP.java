@@ -9,39 +9,38 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class TMKOCEP {
-	public static WebDriver driver;
+	static WebDriver driver = Common.driver;
 	
-	static {
-		String browserPath = "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser";
-		ChromeOptions options = new ChromeOptions();
-		options.setBinary(browserPath);
-		driver = new ChromeDriver(options);
-		driver.manage().window().maximize();
-	}
+//	static {
+//		String browserPath = "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser";
+//		ChromeOptions options = new ChromeOptions();
+//		options.setBinary(browserPath);
+//		driver = new ChromeDriver(options);
+//		driver.manage().window().maximize();
+//		
+//	}
 	
-		@Given("Launch Brave Browser")
-		public void launch_brave_browser() throws InterruptedException, IOException {
+//		@Given("Launch Brave Browser")
+//		public void launch_brave_browser() throws InterruptedException, IOException {
 //			String browserPath = "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser";
 //			ChromeOptions options = new ChromeOptions();
 //			options.setBinary(browserPath);
 //			driver = new ChromeDriver(options);
 //			driver.manage().window().maximize();
-			System.out.println("Browser launched Successfully");
+//			Common.takeScreenshot();
+//			System.out.println("Browser launched Successfully");
 //			screenshot(driver, System.currentTimeMillis());
-			System.out.println("Looking for clearCacheCookes");
-			driver.manage().deleteAllCookies();
-			Thread.sleep(7000);
-			System.out.println("Successfully clearCacheCookes");
-		}
+//			System.out.println("Looking for clearCacheCookes");
+//			driver.manage().deleteAllCookies();
+//			Thread.sleep(7000);
+//			System.out.println("Successfully clearCacheCookes");
+//		}
 		
 		@And("Search youtube and open sussessfully")
 		public void search_youtube_and_open_sussessfully() throws IOException {
@@ -54,6 +53,7 @@ public class TMKOCEP {
 //			screenshot(driver, System.currentTimeMillis());
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
 			System.out.println("YouTube title verified successfully");
+//			Common.takeScreenshot();
 		}
 		
 		@Then("I click on {string}")
@@ -65,6 +65,7 @@ public class TMKOCEP {
 			String searchTerm = prop.getProperty(string);
 			System.out.println("Found : "+string);
 			driver.findElement(By.xpath(searchTerm)).click(); 
+//			Common.takeScreenshot();
 			System.out.println("Clicked "+string+" successfully");
 		}
 		
@@ -76,7 +77,7 @@ public class TMKOCEP {
 	        String searchTerm = prop.getProperty(string);
 //	        System.out.println("Found : "+string);
 	        WebElement element = driver.findElement(By.xpath(searchTerm));
-	        
+//	        Common.takeScreenshot();
 	        System.out.println("Element found: " + element.getText());
 
 		}
@@ -97,14 +98,16 @@ public class TMKOCEP {
 			js.executeScript("arguments[0].scrollIntoView(true);", element);
 			System.out.println("scrolled successfully to : "+string);
 			Thread.sleep(5000);
+//			Common.takeScreenshot();
 			System.out.println("Scrolled Successfully to : " + element.getText());
 			
 		}
 
 		@When("Search {string}")
-		public void search(String str) {
+		public void search(String str) throws IOException {
 			driver.findElement(By.xpath("(//input[@name='search_query'])[1]")).sendKeys(str);
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
+//			Common.takeScreenshot();
 			System.out.println("TMKOC episode searched successfully");
 		}
 
@@ -128,19 +131,11 @@ public class TMKOCEP {
 			Thread.sleep(15000);
 		}
 		
-		@And("Close the Brave browser")
-		public void close_the_brave_browser() {
-			System.out.println("closed browser");
-			driver.quit();
-		}
-		
-		
-		
-		
-		
-		
-		
-		
+//		@And("Close the Brave browser")
+//		public void close_the_brave_browser() {
+//			System.out.println("closed browser");
+//			driver.quit();
+//		}
 		
 		@When("Search foundit and open sussessfully")
 		public void search_foundit_and_open_sussessfully() {

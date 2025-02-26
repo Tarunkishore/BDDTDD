@@ -9,7 +9,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Naukari{
-	WebDriver driver = TMKOCEP.driver;
+	WebDriver driver = Common.driver;
 	
 	@When("Search naukari and open sussessfully")
 	public void search_naukari_and_open_sussessfully() {
