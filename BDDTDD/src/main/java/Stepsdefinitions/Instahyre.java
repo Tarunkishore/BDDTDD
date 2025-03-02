@@ -32,13 +32,6 @@ public class Instahyre{
 	
 	@Then("I update resume for instahyre")
 	public void i_update_resume_for_instahyre() throws InterruptedException {
-//		String projectPath = System.getProperty("user.dir"); 
-//		System.out.println("ProjectFilePath : "+projectPath);
-//		Thread.sleep(10000);
-//		WebElement element = driver.findElement(By.xpath("//h6[contains(text(),'Education')]"));
-//		JavascriptExecutor js = (JavascriptExecutor) driver;
-//		js.executeScript("arguments[0].scrollIntoView(true);", element);
-//		Thread.sleep(10000);
 		WebElement updateResumeButton = driver.findElement(By.xpath("(//label[@for='resume-input'])[2]"));
 		updateResumeButton.click();
 		Thread.sleep(10000);

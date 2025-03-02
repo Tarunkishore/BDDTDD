@@ -16,7 +16,7 @@ public class Naukari{
 		
 		driver.get("https://www.naukri.com/mnjuser/homepage");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
-		System.out.println("YouTube title verified successfully");
+		System.out.println("Search naukari and open sussessfully");
 	}
 	
 	@Then("I upload Resume on Naukari")
