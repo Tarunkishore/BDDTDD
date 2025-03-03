@@ -33,7 +33,7 @@ public class TMKOCEP{
 	@And("Search youtube and open sussessfully")
 	public void search_youtube_and_open_sussessfully() throws IOException {
 		FileReader reader = new FileReader(
-				"/Users/tarunkishore/git/repository/BDDTDD/src/main/resources/Pageobjects/pageobject");
+				"/Users/tarunkishore/eclipse-workspace/BDDTDD/BDDTDD/src/main/resources/Pageobjects/pageobject.properties");
 		Properties prop = new Properties();
 		prop.load(reader);
 //	      driver.get("https://www.youtube.com/");
@@ -52,7 +52,7 @@ public class TMKOCEP{
 	@Then("I click on {string}")
 	public void i_click_on(String string) throws IOException {
 		FileReader reader = new FileReader(
-				"/Users/tarunkishore/git/repository/BDDTDD/src/main/resources/Pageobjects/pageobject");
+				"/Users/tarunkishore/eclipse-workspace/BDDTDD/BDDTDD/src/main/resources/Pageobjects/pageobject.properties");
 		Properties prop = new Properties();
 		prop.load(reader);
 		System.out.println("Looking for search button : " + string);
@@ -67,7 +67,7 @@ public class TMKOCEP{
 	@Then("I verify {string} available on present page")
 	public void i_verify_available_on_present_page(String string) throws IOException {
 		FileReader reader = new FileReader(
-				"/Users/tarunkishore/git/repository/BDDTDD/src/main/resources/Pageobjects/pageobject");
+				"/Users/tarunkishore/eclipse-workspace/BDDTDD/BDDTDD/src/main/resources/Pageobjects/pageobject.properties");
 		Properties prop = new Properties();
 		prop.load(reader);
 		String searchTerm = prop.getProperty(string);
@@ -83,7 +83,7 @@ public class TMKOCEP{
 	public void i_scoll_to_view(String string) throws InterruptedException, IOException {
 //			Thread.sleep(5000);
 		FileReader reader = new FileReader(
-				"/Users/tarunkishore/git/repository/BDDTDD/src/main/resources/Pageobjects/pageobject");
+				"/Users/tarunkishore/eclipse-workspace/BDDTDD/BDDTDD/src/main/resources/Pageobjects/pageobject.properties");
 		Properties prop = new Properties();
 		prop.load(reader);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
