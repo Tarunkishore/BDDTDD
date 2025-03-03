@@ -11,7 +11,6 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -20,8 +19,6 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
-import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 
 public class Common {
@@ -31,9 +28,9 @@ public class Common {
 	public static ExtentTest extentTest;
 	public static String destPath;
 	
-	@BeforeSuite
+//	@BeforeSuite
 	public static void extentSparkReport() {
-		SimpleDateFormat sdf = new SimpleDateFormat("ddhhmmssms");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd-hh-mm-ss-ms");
 //		String filepath = System.getProperty("user.dir")+"/extent-reports/"+sdf.format(new Date())+".html";
 		extentReports = new ExtentReports();
 		String filepath = System.getProperty("user.dir") + "/extent-reports/"+ sdf.format(new Date()) + ".html";
@@ -52,13 +49,11 @@ public class Common {
 	@AfterStep
 	public static String getScreenshotPath() throws IOException {
 		TakesScreenshot ts = (TakesScreenshot) driver;
-		String timestamp = new SimpleDateFormat("ddhhmmssms").format(new Date());
+		String timestamp = new SimpleDateFormat("dd-hh-mm-ss-ms").format(new Date());
 		File source = ts.getScreenshotAs(OutputType.FILE);
 		destPath = System.getProperty("user.dir") + "/screenshots/" + timestamp +".png";
 		File file = new File(destPath);
 		FileUtils.copyFile(source, file);
-		
-		System.out.println("SSSSSSSSSSSSSSSSSSSSSSSSSSS");
 		return destPath;
 	}
 	
@@ -131,7 +126,7 @@ public class Common {
 
 	@After
 	public void tearDown() {
-		extentReports.flush();
+//		extentReports.flush();
 		driver.quit();
 	}
 }

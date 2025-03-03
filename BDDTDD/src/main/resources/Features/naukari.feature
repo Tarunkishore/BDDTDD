@@ -1,9 +1,12 @@
 @NaukariFeature
 Feature: Naukari
 
+Background:
+Given Launch Brave Browser
+
 @naukari
 Scenario Outline: upload resume in naukari
-		Given Launch Brave Browser
+#		Given Launch Brave Browser
 			And I wait Low
 		When Search naukari and open sussessfully
 			And I wait Low
@@ -36,7 +39,7 @@ Scenario Outline: upload resume in naukari
 #			And I wait Low
 #		Then I verify "Personal_details_header" available on present page
 			And I wait High
-	  	And Close the Brave browser
+#	  	And Close the Brave browser
 		
     Examples: 
       | username                  | password  |

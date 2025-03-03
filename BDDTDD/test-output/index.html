@@ -147,12 +147,12 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Cucumber Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Cucumber Tests&quot;&gt;
-    &lt;parameter name=&quot;cucumber.filter.tags&quot; value=&quot;@TMKOC&quot;/&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TMKOC Episode&quot;&gt;
+    &lt;parameter name=&quot;tags&quot; value=&quot;@TMKOC&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;TestRunner.TestNGRunner&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Cucumber Tests --&gt;
+  &lt;/test&gt; &lt;!-- TMKOC Episode --&gt;
 &lt;/suite&gt; &lt;!-- Cucumber Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -164,7 +164,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Cucumber Tests (1 class)</span>
+                <span class="test-name">TMKOC Episode (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -202,12 +202,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'TestRunner.TestNGRunner')
-data.setCell(0, 3, 54605);
+data.setCell(0, 3, 20562);
 window.suiteTableData['Cucumber_Suite']= { tableData: data, tableDiv: 'times-div-Cucumber_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 54 seconds</span>
+              <span class="suite-total-time">Total running time: 20 seconds</span>
               <div id="times-div-Cucumber_Suite">
               </div> <!-- times-div-Cucumber_Suite -->
             </div> <!-- times-div -->
@@ -240,11 +240,11 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">runScenario("Tarak mehta ka ulta chasma", "Optional[TMKOC]")</span>
-                <span class="method-start">262 ms</span>
+                <span class="method-start">299 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">54870 ms</span>
+                <span class="method-start">20864 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
